@@ -29,5 +29,31 @@ int main()
 		printf("%d ",a[i]);
 	}
 	printf("\n");
-	return 0;
+	int key;
+	printf("enter key");
+	scanf("%d",&key);
+	int f=0;
+	int l=n-1;
+	while(f<=1)
+	{
+		int mid=(f+l)/2;
+		if(a[mid]==key)
+		{
+			printf("%d is found at location %d\n",key,mid+1);return 0;
+		}
+			
+	
+		
+		else if(key>a[mid])
+		{
+			f=mid+1;
+		}
+		else
+		{
+			l=mid-1;
+		}
+	}
+		printf("key is not found");
+		return 0;
+   
 }	
